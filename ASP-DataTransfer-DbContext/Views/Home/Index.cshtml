@@ -1,0 +1,30 @@
+﻿@model List<Student>
+@*@{
+    ViewData["Title"] = "Index";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+*@
+<h1>Index</h1>
+
+@*<ul>
+    <li>@ViewBag.Name</li>
+    <li>@ViewData["Surname"]</li>
+    <li>@TempData["Age"]</li>
+</ul>*@
+
+<hr/>
+
+@*<ul>
+    @foreach (var item in ViewBag.Students)
+    {
+        <li>@item.Id @item.Name @item.Surname</li>   
+    }
+</ul>*@
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Id @item.Name @item.Surname</li>   
+    }
+</ul>
