@@ -21,7 +21,18 @@ namespace ASP_DataTransfer_DbContext.Controllers
                 new Student {Id=3,Name="Aqil",Surname="Xelilov"},
             };
 
+            List<Group> groups = new List<Group>
+            {
+                new Group {Id=1,Name="P321"},
+                new Group {Id=2,Name="P322"},
+                new Group {Id=3,Name="P323"}
+            };
+
             ViewBag.Students = students;
+
+            HomeVM home = new HomeVM();
+            home.Groups = groups;
+            home.Students=students;
 
             //return RedirectToAction();
             //return RedirectToAction(nameof(About));
